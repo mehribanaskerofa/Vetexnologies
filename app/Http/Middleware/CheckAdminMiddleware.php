@@ -10,10 +10,11 @@ class CheckAdminMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-//        dd($next);
+        dd($next);
         if(!auth()->check()){
             return redirect()->route('admin.login');
         }
         return $next($request);
     }
+    salam
 }
