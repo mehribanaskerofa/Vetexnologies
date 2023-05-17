@@ -11,9 +11,9 @@ class CheckAdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 //        dd($next);
-        if(!auth()->check()){
-            return redirect()->route('admin.login');
-        }
+//        if(!auth()->check()){
+//            return redirect()->route('admin.login');
+//        }
         return $next($request);
     }
 }
