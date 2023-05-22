@@ -49,13 +49,24 @@
             </div>
         </div>
     </div>
+<div class="info-vatech">
+    <div class="info-left">
+   <h3>What is Vatech</h3>
+    <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fugit harum molestiae nam necessitatibus nobis officiis quos, unde veniam vitae! Aliquid at, autem, consequatur dignissimos doloribus eligendi enim eveniet excepturi exercitationem id incidunt, itaque libero magnam magni molestiae nemo numquam odio officia pariatur qui quisquam rem suscipit tenetur voluptas voluptates. consectetur adipisicing elit. Ad culpa enim fugit ipsa iste molestias nobis nulla quasi, sequi temporibus.</p>
+</div>
+<div class="info-right">
+    <img src="assets/img/logo/vatechpng.png" alt="">
+</div>
+</div>
 
-    <hr>
 
     <!-- End Hero -->
     <!--? Popular Items Start -->
     <div class="popular-items pt-50">
         <div class="container-fluid">
+            <div class="products">
+                <h5>Products</h5>
+            </div>
             <div class="row">
                @foreach($categories3 as $category)
                     <div class="col-lg-4 col-md-6 col-sm-6" >
@@ -78,47 +89,47 @@
 
 
 
-    <div class="new-arrival">
-        <div class="container">
-            <!-- Section tittle -->
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8 col-md-10">
-                    <div class="section-tittle mb-60 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                        <h2>Products</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach($products8 as $product)
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                        <div class="popular-img">
+{{--    <div class="new-arrival">--}}
+{{--        <div class="container">--}}
+{{--            <!-- Section tittle -->--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-xl-7 col-lg-8 col-md-10">--}}
+{{--                    <div class="section-tittle mb-60 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">--}}
+{{--                        <h2>Products</h2>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                @foreach($products8 as $product)--}}
+{{--                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">--}}
+{{--                    <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">--}}
+{{--                        <div class="popular-img">--}}
 {{--                            @foreach($product->images as $image)--}}
 {{--                                <img src="{{asset('storage/images/'.$image->image)}}" alt="">--}}
 {{--                            @endforeach--}}
-                            <img src="{{asset('storage/images/'.$product->image)}}" alt="">
-                            <div class="favorit-items">
-                                <!-- <span class="flaticon-heart"></span> -->
-                                <img src="assets/img/gallery/favorit-card.png" alt="">
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="{{route('productdetail',$product->id)}}">{{$product->title}}</a></h3>
-                            <div class="rating mb-10">{{$product->category->title}}  </div>
-                            <span>$ {{$product->price}}</span>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <!-- Button -->
-            <div class="row justify-content-center">
-                <div class="room-btn">
-                    <a href="catagori.html" class="border-btn">Browse More</a>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--                            <img src="{{asset('storage/images/'.$product->image)}}" alt="">--}}
+{{--                            <div class="favorit-items">--}}
+{{--                                <!-- <span class="flaticon-heart"></span> -->--}}
+{{--                                <img src="assets/img/gallery/favorit-card.png" alt="">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="popular-caption">--}}
+{{--                            <h3><a href="{{route('productdetail',$product->id)}}">{{$product->title}}</a></h3>--}}
+{{--                            <div class="rating mb-10">{{$product->category->title}}  </div>--}}
+{{--                            <span>$ {{$product->price}}</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--            <!-- Button -->--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="room-btn">--}}
+{{--                    <a href="catagori.html" class="border-btn">Browse More</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
     <section class="collection section-bg2 section-padding30 section-over1 ml-15 mr-15" data-background="{{asset('storage/images/'.$aboutPage->image)}}">

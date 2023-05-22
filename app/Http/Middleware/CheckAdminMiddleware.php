@@ -16,5 +16,4 @@ class CheckAdminMiddleware
         }
         return $next($request);
     }
-    salam
 }

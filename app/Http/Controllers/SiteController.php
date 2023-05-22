@@ -51,7 +51,7 @@ class SiteController extends Controller
     }
 
 
-
+ 
     public function page($slug)
     {
         $page=Page::where('slug',$slug)->firstOrFail();
