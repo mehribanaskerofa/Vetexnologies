@@ -77,12 +77,12 @@
                         <!-- Search Box -->
                         <div class="search d-none d-md-block">
                             <ul class="d-flex align-items-center">
-                                <li class="mr-15">
-                                    <div class="nav-search search-switch">
-                                        <i class="ti-search"></i>
-                                    </div>
-                                </li>
-                                <li>
+{{--                                <li class="mr-15">--}}
+{{--                                    <div class="nav-search search-switch">--}}
+{{--                                        <i class="ti-search"></i>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
                                     <div class="card-stor">
                                         <img src="{{asset('assets/img/gallery/card.svg')}}" alt="">
                                         <span>0</span>
