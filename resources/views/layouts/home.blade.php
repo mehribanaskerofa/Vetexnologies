@@ -11,23 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="{{asset('assets/css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/baguetteBox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootsnav.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap-select.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/carousel-ticker.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/code_animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/progressbar_barfiller.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/gijgo.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css2/flex-slider.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css2/lightbox.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css2/owl.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/animated-headline.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/superslides.css')}}">
+
 
     <style>
         #slick-slide-control00{
@@ -36,6 +33,7 @@
     </style>
 
 </head>
+
 <body class="full-wrapper">
 <!-- ? Preloader Start -->
 <div id="preloader-active">
@@ -49,62 +47,83 @@
     </div>
 </div>
 <!-- Preloader Start-->
-<header>
-    <!-- Header Start -->
-    <div class="header-area ">
-        <div class="main-header header-sticky">
-            <div class="container-fluid">
-                <div class="menu-wrapper d-flex align-items-center justify-content-between">
-                    <div class="header-left d-flex align-items-center">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html"><img src="{{asset('assets/img/logo/logo.png')}}" alt=""></a>
-                        </div>
-                        <!-- Main-menu -->
-                        <div class="main-menu  d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    @foreach($menuList as $list)
-                                        <li><a href="{{$list->url}}">{{$list->title}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="header-right1 d-flex align-items-center">
-                        <!-- Social -->
-                        <div class="header-social d-none d-md-block">
-                            @foreach($sosialmedia as $media)
-                                <a href="{{$media->hurl}}">{!! $media->icon !!}</a>
-                            @endforeach
-                        </div>
-                        <!-- Search Box -->
-                        <div class="search d-none d-md-block">
-                            <ul class="d-flex align-items-center">
-{{--                                <li class="mr-15">--}}
-{{--                                    <div class="nav-search search-switch">--}}
-{{--                                        <i class="ti-search"></i>--}}
-{{--                                    </div>--}}
-{{--                                </li>--}}
-{{--                                <li>--}}
-                                    <div class="card-stor">
-                                        <img src="{{asset('assets/img/gallery/card.svg')}}" alt="">
-                                        <span>0</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu -->
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
+<header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html"><img style="width:83px" src="assets/images/vatechlicon-transparency.png" class="logo" alt=""></a>
             </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Sidebar Shop</a></li>
+                            <li><a href="shop-detail.html">Shop Detail</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <li class="side-menu">
+                        <a href="#">
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Start Side Menu -->
+        <div class="side">
+            <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+            <li class="cart-box">
+                <ul class="cart-list">
+                    <li>
+                        <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                        <h6><a href="#">Delica omtantur </a></h6>
+                        <p>1x - <span class="price">$80.00</span></p>
+                    </li>
+                    <li>
+                        <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                        <h6><a href="#">Omnes ocurreret</a></h6>
+                        <p>1x - <span class="price">$60.00</span></p>
+                    </li>
+                    <li>
+                        <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                        <h6><a href="#">Agam facilisis</a></h6>
+                        <p>1x - <span class="price">$40.00</span></p>
+                    </li>
+                    <li class="total">
+                        <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                        <span class="float-right"><strong>Total</strong>: $180.00</span>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <!-- End Side Menu -->
+    </nav>
+    <!-- End Navigation -->
 </header>
+
 
 
 
@@ -114,91 +133,90 @@
 
 
 
+<!-- Start Footer  -->
 <footer>
-    <!-- Footer Start-->
-    <div class="footer-area footer-padding">
-        <div class="container-fluid ">
-            <div class="row d-flex justify-content-between">
-                <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
-                    <div class="single-footer-caption mb-50">
-                        <div class="single-footer-caption mb-30">
-                            <!-- logo -->
-                            <div class="footer-logo mb-35">
-                                <a href="index.html"><img src="{{asset('assets/img/logo/logo2_footer.png')}}" alt=""></a>
-                            </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-                                </div>
-                            </div>
-                            <!-- social -->
-                            <div class="footer-social">
-                                @foreach($sosialmedia as $media)
-                                    <a href="{{$media->hurl}}">{!! $media->icon !!}</a>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>Shop Category</h4>
-                            <ul>
-                                @foreach($categories3 as $category)
-                                    <li><a href="#">{{$category->title}}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>Pages</h4>
-                            <ul>
-                                @foreach($menuList as $list)
-                                    <li><a href="{{$list->url}}">{{$list->title}}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>Get in touch</h4>
-                            <ul>
-
-                                <li><a href="#">{{$contact->phone}}</a></li>
-                                <li><a href="#">{{$contact->email}}</a></li>
-                                <li><a href="#">{{$contact->address}}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- footer-bottom area -->
-    <div class="footer-bottom-area">
+    <div class="footer-main">
         <div class="container">
-            <div class="footer-border">
-                <div class="row d-flex align-items-center">
-                    <div class="col-xl-12 ">
-                        <div class="footer-copy-right text-center">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | developed by Mehriban Askerova <i class="fa fa-heart" aria-hidden="true"></i>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Business Time</h3>
+                        <ul class="list-time">
+                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Newsletter</h3>
+                        <form class="newsletter-box">
+                            <div class="form-group">
+                                <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <button class="btn hvr-hover" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Social Media</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About Freshshop</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End-->
 </footer>
+<!-- End Footer  -->
 <!--? Search model Begin -->
 <div class="search-model-box">
     <div class="h-100 d-flex align-items-center justify-content-center">
@@ -214,45 +232,24 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
-<!-- JS here -->
-<!-- Jquery, Popper, Bootstrap -->
-<script src="{{asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-<script src="{{asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-<script src="{{asset('assets/js/popper.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<!-- ALL JS FILES -->
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="assets/js/jquery.superslides.min.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+<script src="assets/js/inewsticker.js"></script>
+<script src="assets/js/bootsnav.js."></script>
+<script src="assets/js/images-loded.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/baguetteBox.min.js"></script>
+<script src="assets/js/form-validator.min.js"></script>
+<script src="assets/js/contact-form-script.js"></script>
+<script src="assets/js/custom.js"></script>
 
-<!-- Slick-slider , Owl-Carousel ,slick-nav -->
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('assets/js/slick.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.slicknav.min.js')}}"></script>
 
-<!-- One Page, Animated-HeadLin, Date Picker -->
-<script src="{{asset('assets/js/wow.min.js')}}"></script>
-<script src="{{asset('assets/js/animated.headline.js')}}"></script>
-<script src="{{asset('assets/js/jquery.magnific-popup.js')}}"></script>
-<script src="{{asset('assets/js/gijgo.min.js')}}"></script>
-
-<!-- Nice-select, sticky,Progress -->
-<script src="{{asset('assets/js/jquery.nice-select.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.sticky.js')}}"></script>
-<script src="{{asset('assets/js/jquery.barfiller.js')}}"></script>
-
-<!-- counter , waypoint,Hover Direction -->
-<script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
-<script src="{{asset('assets/js/waypoints.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
-<script src="{{asset('assets/js/hover-direction-snake.min.js')}}"></script>
-
-<!-- contact js -->
-<script src="{{asset('assets/js/contact.js')}}"></script>
-<script src="{{asset('assets/js/jquery.form.js')}}"></script>
-<script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('assets/js/mail-script.js')}}"></script>
-<script src="{{asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-
-<!-- Jquery Plugins, main Jquery -->
-<script src="{{asset('assets/js/plugins.js')}}"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 </html>
