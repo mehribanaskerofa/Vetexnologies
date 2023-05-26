@@ -3,64 +3,41 @@
 @section('content')
 
     <!-- Start Slider -->
+
     <div id="slides-shop" class="cover-slides">
-        <ul class="slides-container">
-            <li class="text-center">
-                <img src="assets/images/banner-01.jpg" alt="">
+        <img class="backgroundvatech" src="assets/images/vatechnology.jpeg"> alt="" >
+        <ul >
+            <li class="text-center" >
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="assets/images/banner-01.jpg" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
 
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
-
     </div>
     <!-- End Slider -->
     <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
-            <div class="row">
+            <div class="row catg2">
                 <div class="col-12">
                     <h2 class="noo-sh-title">Categories</h2>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="assets/images/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="assets/images/categories_img_02.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="assets/images/categories_img_03.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                        <img class="img-fluid" src="assets/images/vatech3.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Offire</a>
                     </div>
                 </div>
             </div>
 {{--            info--}}
-
-            <div class="col-lg-6" style="margin:60px">
+            <div class="col-lg-9" style="margin-top:60px">
                 <h2  class="noo-sh-title-top">We are <span>Freshshop</span></h2>
                 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
                     voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
@@ -70,7 +47,7 @@
                 <a style="margin-top: 30px" class="btn hvr-hover" href="#">Read More</a>
             </div>
 {{--            team sect--}}
-        <div class="row my-4">
+        <div class="row team">
             <div class="col-12">
                 <h2 class="noo-sh-title">Meet Our Team</h2>
             </div>
