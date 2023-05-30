@@ -34,7 +34,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[SiteController::class,'home'])->name('home');
 Route::get('/shop',[SiteController::class,'shop'])->name('shop');
 Route::get('/shop/{title}',[SiteController::class,'shopcategory'])->name('shopcategory');
-Route::get('/product/{id}',[SiteController::class,'productdetail'])->name('productdetail');
+//Route::get("/shopdetail", function(){
+//    return View::make("productdetail");
+//});
+Route::get('/productdetail',[SiteController::class,'productdetail'])->name('productdetail');
 Route::get('/about',[SiteController::class,'about'])->name('about');
 Route::get('/contact',[SiteController::class,'contact'])->name('contact');
 Route::post('/contact',[SiteController::class,'contactstore'])->name('contactstore');
@@ -46,8 +49,8 @@ Route::post('/admin/login',[LoginController::class,'login'])->name('admin.login'
 
 
 
-//admin
-Route::group(['prefix' => 'admin','middleware'=>'admincheck'],function(){
+//admin,'middleware'=>'admincheck']
+Route::group(['prefix' => 'admin'],function(){
     Route::get('/',[AdminController::class,'index'])->name('admin.home');
 
     Route::get('/logout',[LoginController::class,'logout'])->name('admin.logout');

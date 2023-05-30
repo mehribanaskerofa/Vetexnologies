@@ -22,6 +22,7 @@ class SiteController extends Controller
     public function about()
     {
         $about=Page::where('slug','about')->firstOrFail();
+
         return view('about',compact('about'));
     }
 
@@ -51,16 +52,16 @@ class SiteController extends Controller
     }
 
 
- 
+
     public function page($slug)
     {
         $page=Page::where('slug',$slug)->firstOrFail();
         return view('page',compact('page'));
     }
 
-    public function productdetail($id)
+    public function productdetail()
     {
-        $product=Product::with('category')->with('images')->where('id',$id)->firstOrFail();
+        $product=Product::with('category')->with('images')->get();
         return view('productdetail',compact('product'));
     }
 
