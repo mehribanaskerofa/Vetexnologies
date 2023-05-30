@@ -76,6 +76,14 @@
     </a>
 </li>
 <li class="nav-item">
+    <a href="{{route('team.index')}}" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+            Team
+        </p>
+    </a>
+</li>
+<li class="nav-item">
     <a href="{{route('sosialmedia.index')}}" class="nav-link">
         <i class="nav-icon fas fa-th"></i>
         <p>

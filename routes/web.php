@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductImageController;
 
 
-
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\SiteController;
 
 use Illuminate\Support\Facades\Route;
@@ -72,6 +72,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::resource('product',ProductController::class)->except('show');
     Route::resource('productimage',ProductImageController::class)->except('show');
     Route::resource('sosialmedia',SosialMediaController::class)->except('show');
+    Route::resource('team',TeamController::class)->except('show');
 
 
     Route::group(['prefix'=>'contactform'],function (){

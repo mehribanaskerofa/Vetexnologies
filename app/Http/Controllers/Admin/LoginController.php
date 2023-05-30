@@ -19,7 +19,6 @@ class LoginController extends Controller
     public function login(LoginAdminRequest $request)
     {
         if(auth()->attempt($request->only('email','password'),$request->remember_token==1)){
-//            dd(auth()->user());
             return redirect()->route('admin.home');
         }
 
