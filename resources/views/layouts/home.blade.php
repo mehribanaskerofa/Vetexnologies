@@ -36,7 +36,7 @@
 
 <body class="full-wrapper">
 
-<header class="main-header">
+<header class="main-header" id="homes">
     <!-- Start Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
         <div class="container">
@@ -45,25 +45,26 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html"><img style="width:83px" src="assets/images/vatechlicon-transparency.png" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{route('home')}}"><img style="width:83px" src="assets/images/vatechlicon-transparency.png" class="logo" alt=""></a>
             </div>
             <!-- End Header Navigation -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About </a></li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="shop.html">Sidebar Shop</a></li>
-                            <li><a href="shop-detail.html">Shop Detail</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About </a></li>
+{{--                    <li class="dropdown">--}}
+{{--                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>--}}
+{{--                        <ul class="dropdown-menu">--}}
+{{--                            <li><a href="shop.html">Sidebar Shop</a></li>--}}
+{{--                            <li><a href="shop-detail.html">Shop Detail</a></li>--}}
 
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+{{--                        </ul>--}}
+{{--                    </li>--}}
+                    <li class="nav-item"><a class="nav-link" href="{{route('shop')}}">Shop</a></li>
+{{--                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>--}}
+                    <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -74,7 +75,7 @@
                     <li class="side-menu">
                         <a href="#">
                             <i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
+                            <span class="badge">!</span>
                         </a>
                     </li>
                 </ul>
@@ -129,9 +130,9 @@
             <div class="row row-up">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
-                        <h4>About Freshshop</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <h4>About WeTexnologies</h4>
+                        <p>{{\Illuminate\Support\Str::wordCount($aboutPage->title)>20 ? \Illuminate\Support\Str::words($aboutPage->title,20) : $aboutPage->title }}</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -139,13 +140,13 @@
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: {{$contact->address}}</p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></p>
                             </li>
                         </ul>
                     </div>
@@ -170,9 +171,9 @@
                         <h3>Social Media</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            @foreach($sosialmedias as $sosialmedia)
+                            <li><a href="{{$sosialmedia->url}}">{!!$sosialmedia->icon!!}</a></li>
+                                @endforeach
                         </ul>
                     </div>
                 </div>
@@ -182,18 +183,11 @@
 </footer>
 <!-- End Footer  -->
 <!--? Search model Begin -->
-<div class="search-model-box">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-btn">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Searching key.....">
-        </form>
-    </div>
-</div>
+
 <!-- Search model end -->
 <!-- Scroll Up -->
 <div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    <a title="Go to Top" href="#homes"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
 <!-- ALL JS FILES -->

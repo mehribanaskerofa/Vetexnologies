@@ -37,7 +37,7 @@ Route::get('/shop/{title}',[SiteController::class,'shopcategory'])->name('shopca
 //Route::get("/shopdetail", function(){
 //    return View::make("productdetail");
 //});
-Route::get('/productdetail',[SiteController::class,'productdetail'])->name('productdetail');
+Route::get('/product/{id}',[SiteController::class,'productdetail'])->name('productdetail');
 Route::get('/about',[SiteController::class,'about'])->name('about');
 Route::get('/contact',[SiteController::class,'contact'])->name('contact');
 Route::post('/contact',[SiteController::class,'contactstore'])->name('contactstore');

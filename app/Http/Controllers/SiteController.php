@@ -59,9 +59,9 @@ class SiteController extends Controller
         return view('page',compact('page'));
     }
 
-    public function productdetail()
+    public function productdetail($id)
     {
-        $product=Product::with('category')->with('images')->get();
+        $product=Product::with('category')->with('images')->where('id',$id)->firstOrFail();
         return view('productdetail',compact('product'));
     }
 

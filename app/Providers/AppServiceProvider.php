@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Model::preventLazyLoading(!$this->app->isProduction());
 
         $menuList=Menu::all();
-        $sosialmedia=SosialMedia::all();
+        $sosialmedias=SosialMedia::all();
         $categories3=Category::limit(3)->get();
         $products8=Product::with('category')->limit(8)->get();
         $contact=Contact::where('id',1)->first();
@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
         $aboutPage=Page::where('slug','about')->first();
         View::share([
             'menuList'=>$menuList,
-            'sosialmedia'=>$sosialmedia,
+            'sosialmedias'=>$sosialmedias,
             'contact'=>$contact,
             'categories3'=>$categories3,
             'headPage'=>$headPage,
