@@ -47,54 +47,25 @@
                 <a style="margin-top: 30px" class="btn hvr-hover" href="#">Read More</a>
             </div>
 {{--            team sect--}}
-        <div class="row team">
+        <div class="row team justify-content-center">
             <div class="col-12">
                 <h2 class="noo-sh-title">Meet Our Team</h2>
             </div>
-            <div class="col-sm-6 col-lg-3">
+
+           @foreach($teams as $team)
+            <div class="col-sm-4 col-lg-4">
                 <div class="hover-team">
-                    <div class="our-team"> <img src="assets/images/img-1.jpg" alt="" />
+                    <div class="our-team"> <img src="{{asset('storage/images/'.$team->image)}}" alt="" />
                         <div class="team-content">
-                            <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                            <h3 class="title">{{strtoupper($team->fullname)}}</h3> <span class="post">{{$team->title}}</span> </div>
+                        <div class="icon"> <a href="{{route('about')}}"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
                     </div>
                     <div class="team-description">
+                        {{$team->description}}
                     </div>
                     <hr class="my-0"> </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="assets/images/img-2.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Kristiana</h3> <span class="post">Web Developer</span> </div>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-                    </div>
-                    <hr class="my-0"> </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="assets/images/img-3.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Steve Thomas</h3> <span class="post">Web Developer</span> </div>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-                    </div>
-                    <hr class="my-0"> </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="assets/images/img-1.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-                    </div>
-                    <hr class="my-0"> </div>
-            </div>
+            @endforeach
         </div>
 
 

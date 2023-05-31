@@ -62,7 +62,7 @@
 
 {{--                        </ul>--}}
 {{--                    </li>--}}
-                    <li class="nav-item"><a class="nav-link" href="{{route('shop')}}">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('productdetail',10)}}">Shop</a></li>
 {{--                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>--}}
                     <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
